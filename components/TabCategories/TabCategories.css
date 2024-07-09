@@ -1,0 +1,13 @@
+.bg-default-100 {
+    background-color: white;
+}
+
+.bg-default-100{
+    color: #37332B;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.bg-danger{
+    background-color: #ae0a0b;
+}

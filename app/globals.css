@@ -1,0 +1,25 @@
+@tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+  
+  .custom-carousel-item {
+    width: 300px !important; 
+    min-height: 280px !important; 
+    margin-top: 1rem;
+  }
+  .custom-carousel-item-astrology {
+    
+    width: 174px !important; 
+    min-height: 100px !important; 
+    margin-top: 1rem;
+
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
