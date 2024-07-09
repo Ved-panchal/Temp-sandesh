@@ -172,7 +172,7 @@ export const PhotoGallery: SliderType[] = [
 
   ];
 
-  export interface AstrologyType extends SliderType{
+export interface AstrologyType extends SliderType{
     Gujarati:string;
   }
 export const Astrology:AstrologyType[] = [
@@ -261,3 +261,127 @@ export const Astrology:AstrologyType[] = [
     Description: "ધીરજના ફળ મીઠાં ચાખી શકશો, અગત્યની વ્યક્તિ ઉપયોગી બને, મિત્ર મુરબ્બીથી સહકાર, પ્રવાસ."
   },
 ]
+
+
+export const World_India:SliderType[] =[
+  {
+    Heading:"World",
+    Image: "/Images/World_India/1.jpg",
+    Description:"Hathras Tregedy: પ્રાઈવેટ આર્મી,ડિઝાઈનર કપડાં,ગોલ્ડન ઘડિયાળ,મોંઘા ચશ્મા,જાણો ભોલે બાબા સાકારની લાઈફસ્ટાઈલ"
+  },
+  {
+    Heading:"India",
+    Image: "/Images/World_India/2.jpg",
+    Description:"Mumbai attacks: મુંબઈ હુમલાના આરોપી રાણાને ભારત લાવવાનો રસ્તો સાફ,જાણો કયારે લવાશે?"
+  },
+  {
+    Heading:"Sport News",
+    Image: "/Images/Sports/1.jpg",
+    Description:"Team India એ ફ્લાઇટમાં આવી રીતે કર્યું ટ્રોફી સાથે સેલિબ્રેશન, જુઓ Video"
+  },
+
+]
+
+export const SportsNews:SliderType[] =[
+  {
+    Heading:"Team India",
+    Image: "/Images/Sports/1.jpg",
+    Description:"Mumbai attacks: મુંબઈ હુમલાના આરોપી રાણાને ભારત લાવવાનો રસ્તો સાફ,જાણો કયારે લવાશે?"
+  },
+  {
+    Heading:"IND vs SA",
+    Image: "/Images/Sports/2.jpg",
+    Description:"Mumbai attacks: મુંબઈ હુમલાના આરોપી રાણાને ભારત લાવવાનો રસ્તો સાફ,જાણો કયારે લવાશે?"
+  },
+  {
+    Heading:"Football",
+    Image: "/Images/Sports/3.jpg",
+    Description:"Mumbai attacks: મુંબઈ હુમલાના આરોપી રાણાને ભારત લાવવાનો રસ્તો સાફ,જાણો કયારે લવાશે?"
+  },
+  {
+    Heading:"Cricket",
+    Image: "/Images/Sports/4.jpg",
+    Description:"Mumbai attacks: મુંબઈ હુમલાના આરોપી રાણાને ભારત લાવવાનો રસ્તો સાફ,જાણો કયારે લવાશે?"
+  },
+
+
+]
+
+export interface GujaratType  {
+  Heading:string;
+  Title: {
+    Name: string;
+    Image: string;
+    Description: string;
+  }[];
+
+}
+export const Gujarat_Khabar: GujaratType[] = [
+  {
+    Heading: "Gujarat Metro",
+    Title: [
+      {
+        Name: "Metro",
+        Image: "/Images/Sports/1.jpg", // Example image path
+        Description: "Description of the Metro project in Gujarat"
+      },
+      {
+        Name: "Bhuj",
+        Image: "/Images/Gujarat/2.jpg", // Example image path
+        Description: "Description of the Metro project in Gujarat"
+      },
+      {
+        Name: "Bhavnagar",
+        Image: "/Images/Gujarat/3.jpg",
+        Description: "Description of the Metro project in Gujarat"
+      },
+      {
+        Name: "Surat",
+        Image: "/Images/Gujarat/4.jpg", // Example image path
+        Description: "Description of the Metro project in Gujarat"
+      },
+      {
+        Name: "Ahemdabad",
+        Image: "/Images/Gujarat/5.jpg", // Example image path
+        Description: "Description of the Metro project in Gujarat"
+      },
+      {
+        Name: "Vadodara",
+        Image: "/Images/Gujarat/6.jpg", // Example image path
+        Description: "Description of the Metro project in Gujarat"
+      },
+    ],
+  },
+  {
+    Heading: "Khabar Gujarat",
+    Title: [
+      {
+        Name: "+",
+        Image: "/Images/Gujarat/7.jpg", // Example image path
+        Description: "Description of the Metro project in Gujarat"
+      },
+      {
+        Name: "Other Cities",
+        Image: "/Images/Gujarat/8.jpg", // Example image path
+        Description: "Description of the Metro project in Gujarat"
+      },
+      {
+        Name: "Patan",
+        Image: "/Images/Gujarat/9.jpg", // Example image path
+        Description: "Description of the Metro project in Gujarat"
+      },
+      {
+        Name: "Narmada (Rajpipla)",
+        Image: "/Images/Gujarat/2.jpg", // Example image path
+        Description: "Description of the Metro project in Gujarat"
+      },
+      {
+        Name: "Junagadh",
+        Image: "/Images/Gujarat/5.jpg", // Example image path
+        Description: "Description of the Metro project in Gujarat"
+      },
+    ],
+  },
+  
+
+];

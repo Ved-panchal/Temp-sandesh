@@ -9,6 +9,7 @@ import {
 import SecondaryHeader from "../SecondaryHeader/SecondaryHeader";
 
 import Image from "next/image";
+import { StringDecoder } from "string_decoder";
 
 function Header() {
   const dropdownItems = [
@@ -28,7 +29,7 @@ function Header() {
   const [active, setActive] = useState("Home");
   const [isSticky, setIsSticky] = useState(false);
 
-  const handleSetActive = (item) => {
+  const handleSetActive = (item:string) => {
     setActive(item);
   };
 
@@ -113,7 +114,7 @@ function Header() {
               "World",
               "Entertainment",
               "Lifestyle",
-            ].map((item) => (
+            ].map((item:string) => (
               <a
                 key={item}
                 href="#"

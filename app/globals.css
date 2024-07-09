@@ -1,18 +1,31 @@
-@tailwind base;
+  @tailwind base;
   @tailwind components;
   @tailwind utilities;
   
   .custom-carousel-item {
-    width: 300px !important; 
+    /* width: 335px !important;  */
     min-height: 280px !important; 
     margin-top: 1rem;
   }
   .custom-carousel-item-astrology {
     
-    width: 174px !important; 
+    /* width: 194px !important;  */
     min-height: 100px !important; 
     margin-top: 1rem;
 
+  }
+
+  .astrology-image  div  img{
+    border-radius: 50%;
+  }
+
+  .rounded-target > div > img{
+    border-radius:0;
+
+  }
+
+  .astrology-image  div {
+    box-shadow: none;
   }
 
   @keyframes marquee {

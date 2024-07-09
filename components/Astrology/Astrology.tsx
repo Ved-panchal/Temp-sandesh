@@ -12,7 +12,7 @@ import SubCategoryCard from "../CategoryCard/SubCategoryCard/SubCategoryCard";
 import Share from "../Share/Share";
 
 // Custom ButtonGroup component for carousel navigation
-const ButtonGroup = ({ next, previous, goToSlide, ...rest }) => {
+const ButtonGroup = ({ next, previous, goToSlide, ...rest }:any) => {
   const {
     carouselState: { currentSlide, totalItems, slidesToShow },
   } = rest;
@@ -88,7 +88,7 @@ const Slider_Astrology = () => {
 
   return (
     <div className="w-full relative flex flex-col justify-center items-center">
-      <div className="w-[65vw] h-[80vh] p-4">
+      <div className="w-[65vw] h-[50vh] p-4">
         <Carousel
           className="gap-0"
           swipeable={true}
@@ -109,12 +109,12 @@ const Slider_Astrology = () => {
         >
           {Astrology.map((slide, index) => (
             <Card
-              className="mx-3  mt-14 w-[160px] rounded-md shadow-xl flex items-center justify-center hover:text-primary  relative"
+              className="mx-3   mt-14 w-[160px] rounded-md shadow-none flex items-center justify-center hover:text-primary  relative"
               key={index}
               shadow="sm"
             >
               <CardBody
-                className="overflow-visible w-[100px] rounded-full p-0"
+                className="overflow-visible bg-[#FFFFFF] w-[100px] rounded-full p-0 astrology-image"
                 onClick={() =>
                   handleCardClick(index, slide.Description, slide.Gujarati)
                 }
@@ -123,8 +123,9 @@ const Slider_Astrology = () => {
                   shadow="sm"
                   radius="lg"
                   alt={slide.Heading}
-                  className="object-contain rounded-full"
+                  className="object-contain bg-[#0f0] "
                   src={slide.Image}
+
                 />
                 <p
                   className={`text-center line-clamp-2 cursor-pointer ${
@@ -152,6 +153,18 @@ const Slider_Astrology = () => {
           <span className="mx-2 text-gray-600">Or</span>
           <hr className="w-1/3 border-gray-400" />
         </div> */}
+        <div className="my-3">
+        <div className="flex  ">
+          <SubCategoryCard />
+          <SubCategoryCard />
+        </div>
+        <div className="flex  ">
+          <SubCategoryCard />
+          <SubCategoryCard />
+        </div>
+        </div>
+      
+        
        
         
        

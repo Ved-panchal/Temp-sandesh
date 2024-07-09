@@ -7,7 +7,7 @@ type Tempdata = {
   Description: string;
   image: string;
 };
-const SubCategoryCard = () => {
+const SubCategoryCard = ({border}:{border?:string}) => {
   const tempData: Tempdata[] = [
     {
       Title: "22 કેરેટ ગોલ્ડ થયું મોઘું",
@@ -21,7 +21,7 @@ const SubCategoryCard = () => {
       {tempData.map((data, index) => {
         return (
           <div
-            className="relative mx-3 border-gray_border border-t-1 flex flex-row text-[15px] text-secondary font-semibold"
+            className={`relative mx-3 ${border?"border-y bg-white": ""}  border-gray_border border-t-1 flex flex-row text-[15px] text-secondary font-semibold`}
             key={index}
           >
             <div className="py-4 pl-4">

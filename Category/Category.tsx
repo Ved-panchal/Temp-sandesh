@@ -14,7 +14,8 @@ const Category = () => {
   const tabCategoryNames = new Set(tabCategories.map(category => category.CategoryName));
 
   return (
-    <div className='w-full h-full flex flex-wrap justify-center items-center gap-3'>
+    <div className='flex justify-center items-center'>
+    <div className='w-[80vw] h-full flex flex-wrap justify-between items-center gap-3'>
       {CategoryNews.map((category, index) => {
         if (!tabCategoryNames.has(category.CategoryName)) {
           return <Categorycard key={index} index={index} {...category} />;
@@ -24,6 +25,7 @@ const Category = () => {
       {
         tabCategories.length > 0 ?  <TabCategories TabCategories={tabCategories} /> : <></>
       }
+    </div>
     </div>
   );
 };

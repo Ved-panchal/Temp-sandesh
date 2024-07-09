@@ -10,7 +10,7 @@ import { Entertainment } from "@/action"; // Adjust this import as per your actu
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 // Custom ButtonGroup component for carousel navigation
-const ButtonGroup = ({ next, previous, goToSlide, ...rest }) => {
+const ButtonGroup = ({ next, previous, goToSlide, ...rest }:any) => {
     const { carouselState: { currentSlide, totalItems, slidesToShow } } = rest;
     const isAtStart = currentSlide === 0;
     const isAtEnd = currentSlide >= totalItems - slidesToShow;

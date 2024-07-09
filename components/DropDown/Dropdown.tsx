@@ -1,18 +1,26 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, FormEvent , ReactNode } from 'react';
+interface DropdownTriggerProps {
+  children: ReactNode;
+}
+interface DropdownMenuProps {
+  isOpen: boolean;
+  children: ReactNode;
+}
 
-export function Dropdown({ children }) {
+export function Dropdown({ children }:any) {
   const [isOpen, setIsOpen] = useState(false);
-  const dropdownRef = useRef(null);
+  const dropdownRef = useRef<HTMLElement>(null);
+
 
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         setIsOpen(false);
       }
     };
     document.addEventListener('mousedown', handleClickOutside);
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('mouseleave', handleClickOutside);
     };
   }, []);
 
@@ -28,7 +36,7 @@ export function Dropdown({ children }) {
   );
 }
 
-export function DropdownTrigger({ children }) {
+export function DropdownTrigger({ children }:DropdownTriggerProps) {
   return (
     <div className="text-white focus:outline-none">
       {children}
@@ -36,7 +44,7 @@ export function DropdownTrigger({ children }) {
   );
 }
 
-export function DropdownMenu({ isOpen, children }) {
+export function DropdownMenu({ isOpen, children }:DropdownMenuProps) {
   return (
     isOpen && (
       <div className="absolute right-0 mt-2 w-40  bg-primary bg-opacity-70 text-white  shadow-lg z-20">
@@ -46,7 +54,7 @@ export function DropdownMenu({ isOpen, children }) {
   );
 }
 
-export function DropdownItem({ children }) {
+export function DropdownItem({ children }:DropdownTriggerProps) {
   return (
     <a
       href="#"

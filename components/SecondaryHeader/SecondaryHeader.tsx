@@ -1,7 +1,7 @@
-"use client"
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Image from 'next/image'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { SectionWrapper } from '../HOC'
 import {
     faFacebook,
@@ -16,23 +16,6 @@ import Marquee from "react-fast-marquee";
 
 const SecondaryHeader = () => {
 
-    const [isSticky, setIsSticky] = useState(false);
-
-    useEffect(() => {
-        const handleScroll = () => {
-          if (window.pageYOffset > 192) {
-            setIsSticky(true);
-          } else {
-            setIsSticky(false);
-          }
-        };
-    
-        window.addEventListener("scroll", handleScroll);
-    
-        return () => {
-          window.removeEventListener("scroll", handleScroll);
-        };
-      }, []);
 
   return (
     <div className='flex w-full justify-between items-center'>
